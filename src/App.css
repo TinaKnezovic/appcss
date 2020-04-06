@@ -1,38 +1,124 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* sa margin udaljavam od drugog diva, sa padding udaljavam unutar diva */
+
+body {
+  font-family: Arial;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  padding: 40px;
+  text-align: center;
+  background: white;
+  color: black;
+}
+
+.navbar {
+  background-color: #333;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.navbar a {
   color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a:hover{
+  background-color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.row {  
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+
+.side {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.imgSide{
+  padding:5%;
+}
+
+.signInText{
+  padding-top: 4%;
+}
+
+.signInForm{
+  background-color: rgb(199, 195, 195);
+  border-radius: 5px;
+  padding-bottom: 2%;
+  
+}
+
+.singInButton {
+  background-color: black;
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.main {
+  background-color: white;
+  padding: 20px;
+}
+
+
+.mainText{ 
+  background-color: rgba(236, 232, 232, 0.692);
+  border-radius: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  list-style-type: none;
+}
+
+.fLink{ 
+  padding-left: 10%;
+}
+
+
+
+/* Za iphoneX */
+@media screen and (max-width: 400px) {
+  .row, .navbar {   
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
   }
-  to {
-    transform: rotate(360deg);
+  .header {
+    padding: 20px;
+    text-align: center;
+    background: white;
+    color: black;
+  }
+}
+
+/* Za tablet */
+@media screen and (max-width: 1030px) {
+  .row, .navbar {   
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+    color: black;
   }
 }
